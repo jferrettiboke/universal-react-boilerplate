@@ -4,7 +4,7 @@ import App from '../components/App.jsx'
 import Landing from '../components/Landing.jsx'
 import About from '../components/About.jsx'
 
-module.exports = (
+export default (
   <Route path="/" component={App}>
     <IndexRoute component={Landing} />
     <Route path="/about" component={About} />

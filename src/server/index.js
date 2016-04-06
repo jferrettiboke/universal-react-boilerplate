@@ -8,7 +8,7 @@ import routes from '../shared/routes'
 const app = express()
 const PORT = process.env.PORT || 8080
 
-app.use(express.static(path.join(__dirname, '/../../build/public')))
+app.use(express.static(path.join(__dirname, '/../../dist/public')))
 
 app.get('*', (req, res) => {
   match({ routes: routes, location: req.url }, (err, redirect, props) => {

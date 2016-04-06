@@ -6,7 +6,7 @@
   "scripts": {
     "build:client": "webpack --watch",
     "build:server": "webpack --watch --config webpack.server.config.js",
-    "start": "node build/server.js",
+    "start": "node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jesús Ferretti",

@@ -4,7 +4,7 @@ var path = require('path')
 module.exports = {
   entry: path.resolve(__dirname, './src/server/index.js'),
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'server.js'
   },
   target: 'node',

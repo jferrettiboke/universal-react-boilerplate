@@ -4,9 +4,8 @@
   "description": "Universal React Boilerplate",
   "main": "index.js",
   "scripts": {
-    "build:client": "webpack --watch",
-    "build:server": "webpack --watch --config webpack.server.config.js",
-    "start": "nodemon dist/server.js",
+    "build": "webpack --watch",
+    "start": "nodemon dist/server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jesús Ferretti",

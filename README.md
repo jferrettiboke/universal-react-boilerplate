@@ -14,15 +14,10 @@ A very basic **Universal React Boilerplate** to get started quick.
 
 ## Getting started
 
-### Build client
+### Build
 
-Compile client and watching for future compilations.
-`$ npm run build:client`
-
-### Build server
-
-Compile server and watching for future compilations.
-`$ npm run build:server`
+Compile client, server and watching for future compilations on both sides.
+`$ npm run build`
 
 ### Start the app
 

@@ -3,12 +3,31 @@ import express from 'express'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
 import { match, RouterContext } from 'react-router'
+import Helmet from 'react-helmet'
 import routes from '../shared/routes'
 
 const app = express()
 const PORT = process.env.PORT || 8080
 
 app.use(express.static(path.join(__dirname, '/../../dist/public')))
+
+function renderPage(appHtml, head) {
+  return `
+    <!DOCTYPE html>
+    <html ${head.htmlAttributes.toString()}>
+      <head>
+        <meta charset="utf-8" />
+        ${head.title.toString()}
+        ${head.meta.toString()}
+        ${head.link.toString()}
+      </head>
+      <body>
+        <div id="root">${appHtml}</div>
+        <script src="/bundle.js"></script>
+      </body>
+    </html>
+  `;
+}
 
 app.get('*', (req, res) => {
   match({ routes: routes, location: req.url }, (err, redirect, props) => {
@@ -18,28 +37,13 @@ app.get('*', (req, res) => {
       res.redirect(redirect.pathname + redirect.search)
     } else if (props) {
       const appHtml = renderToString(<RouterContext {...props} />)
-      res.send(renderPage(appHtml))
+      let head = Helmet.rewind();
+      res.send(renderPage(appHtml, head))
     } else {
       res.status(404).send('Not Found')
     }
   })
 })
-
-function renderPage(appHtml) {
-  return `
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>Universal React Boilerplate</title>
-      </head>
-      <body>
-        <div id="root">${appHtml}</div>
-        <script src="bundle.js"></script>
-      </body>
-    </html>
-   `
-}
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);

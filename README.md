@@ -2,7 +2,7 @@
 
 ## Description
 
-A very basic **Universal React Boilerplate** to get started quick.
+An **Universal React Boilerplate** with sweet features to start quickly.
 
 ## Features
 

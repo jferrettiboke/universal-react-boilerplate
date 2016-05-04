@@ -4,8 +4,8 @@
   "description": "Universal React Boilerplate",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --watch",
-    "start": "nodemon dist/server",
+    "build": "./node_modules/.bin/webpack --watch",
+    "start": "./node_modules/.bin/nodemon dist/server",
     "start:dev": "node server.dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

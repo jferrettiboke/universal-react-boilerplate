@@ -8,21 +8,27 @@ An **Universal React Boilerplate** with sweet features to start quickly.
 
 * ES6 and JSX with [Babel 6.x](https://babeljs.io/)
 * [Webpack](https://webpack.github.io/)
-* [React Hot Loader](http://gaearon.github.io/react-hot-loader/)
-* [React](https://facebook.github.io/react/)
+* [Express 4.x](http://expressjs.com/)
+* [React 15.x](https://facebook.github.io/react/)
 * [React Router 2.x](https://github.com/reactjs/react-router)
 * [React Helmet](https://github.com/nfl/react-helmet)
-* [Express 4.x](http://expressjs.com/)
+* [React Hot Loader](http://gaearon.github.io/react-hot-loader/)
+* [ESLint](http://eslint.org/)
+* [Nodemon](http://nodemon.io/)
 
 ## Getting started
 
-### Development enviroment
+### Install dependencies
+
+Execute `$ npm install` to install all dependencies.
+
+### Development environment
 
 #### Start the app
 
 Execute `$ npm run start:dev` to run the development server on **http://localhost:3000**.
 
-### Production enviroment
+### Production environment
 
 #### Build the app
 

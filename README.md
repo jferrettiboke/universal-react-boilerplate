@@ -13,8 +13,13 @@ An **Universal React Boilerplate** with sweet features to start quickly.
 * [React Router 2.x](https://github.com/reactjs/react-router)
 * [React Helmet](https://github.com/nfl/react-helmet)
 * [React Hot Loader](http://gaearon.github.io/react-hot-loader/)
+* [PostCSS](http://postcss.org/)
 * [ESLint](http://eslint.org/)
 * [Nodemon](http://nodemon.io/)
+
+### Coming soon
+
+* [Redux](http://redux.js.org/)
 
 ## Getting started
 

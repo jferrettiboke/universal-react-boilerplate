@@ -13,8 +13,11 @@ An **Universal React Boilerplate** with sweet features to start quickly.
 * [React Router 2.x](https://github.com/reactjs/react-router)
 * [React Helmet](https://github.com/nfl/react-helmet)
 * [React Hot Loader](http://gaearon.github.io/react-hot-loader/)
-* [PostCSS](http://postcss.org/) with [Autoprefixer](https://github.com/postcss/autoprefixer) and [PreCSS](https://github.com/jonathantneal/precss)
+* [PostCSS](http://postcss.org/)
+    * [Autoprefixer](https://github.com/postcss/autoprefixer)
+    * [PreCSS](https://github.com/jonathantneal/precss)
 * [ESLint](http://eslint.org/) with Airbnb's JavaScript style guide
+* [Stylelint](http://stylelint.io/)
 * [Nodemon](http://nodemon.io/)
 
 ### Coming soon

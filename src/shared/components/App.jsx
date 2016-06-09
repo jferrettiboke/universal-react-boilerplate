@@ -1,17 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Helmet from 'react-helmet';
+import styles from './App.css';
 
 const App = props => (
   <div>
-    <Helmet htmlAttributes={{ lang: 'en' }} />
+    <Helmet
+      htmlAttributes={{ lang: 'en' }}
+      link={[
+        { rel: 'stylesheet', href: '/css/styles.css' }
+      ]}
+    />
     <h1>App</h1>
     <ul>
       <li>
-        <Link to="/">Landing</Link>
+        <Link to="/" className={styles['text-green']}>Landing</Link>
       </li>
       <li>
-        <Link to="/about">About</Link>
+        <Link to="/about" className={styles['text-green']}>About</Link>
       </li>
     </ul>
     {props.children}

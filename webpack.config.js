@@ -1,10 +1,16 @@
 var fs = require('fs');
 var path = require('path');
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var commonLoaders = [
-  { test: /\.jsx?$/, loader: 'babel', exclude: /node_modules/ }
+  { test: /\.jsx?$/, loader: 'babel', exclude: /node_modules/ },
+  { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]', 'postcss-loader') }
 ];
+
+var postCSSConfig = function () {
+  return [require('autoprefixer'), require('precss')];
+};
 
 module.exports = [
   {
@@ -16,7 +22,11 @@ module.exports = [
     },
     module: {
       loaders: commonLoaders
-    }
+    },
+    plugins: [
+      new ExtractTextPlugin('css/styles.css')
+    ],
+    postcss: postCSSConfig
   },
   {
     // The configuration for the server-side rendering
@@ -39,6 +49,9 @@ module.exports = [
     },
     module: {
       loaders: commonLoaders
-    }
+    },
+    plugins: [
+      new ExtractTextPlugin('public/css/styles.css')
+    ]
   }
 ];

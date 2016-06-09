@@ -13,15 +13,24 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/'
   },
+  module: {
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        loaders: ['react-hot', 'babel'],
+        include: path.join(__dirname, 'src'),
+        exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]!postcss-loader'
+      }
+    ]
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin()
   ],
-  module: {
-    loaders: [{
-      test: /\.jsx?$/,
-      loaders: ['react-hot', 'babel'],
-      include: path.join(__dirname, 'src'),
-      exclude: /node_modules/
-    }]
+  postcss: function () {
+    return [require('autoprefixer'), require('precss')];
   }
 };

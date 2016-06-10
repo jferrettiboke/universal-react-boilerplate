@@ -1,13 +1,10 @@
 var path = require('path');
 var webpack = require('webpack');
 
-var PATHS = {
-  app: path.join(__dirname, 'src')
-}
-
 module.exports = {
   devtool: 'eval',
   entry: [
+    'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
     './src/client/index'
@@ -17,26 +14,22 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/'
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
   module: {
     preLoaders: [
       {
         test: /\.jsx?$/,
         loaders: ['eslint'],
-        include: PATHS.app,
-        exclude: /node_modules/
-      },
-      {
-        test: /\.css$/,
-        loaders: ['postcss'],
-        include: PATHS.app
+        include: path.join(__dirname, 'src')
       }
     ],
     loaders: [
       {
         test: /\.jsx?$/,
-        loaders: ['react-hot', 'babel'],
-        include: PATHS.app,
-        exclude: /node_modules/
+        loaders: ['babel'],
+        include: path.join(__dirname, 'src')
       },
       {
         test: /\.css$/,
@@ -44,14 +37,10 @@ module.exports = {
           'style',
           'css?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]',
           'postcss'
-        ],
-        include: PATHS.app
+        ]
       }
     ]
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
   eslint: {
     configFile: './.eslintrc.json'
   },

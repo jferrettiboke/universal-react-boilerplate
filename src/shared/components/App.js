@@ -11,13 +11,13 @@ const App = props => (
         { rel: 'stylesheet', href: '/css/styles.css' }
       ]}
     />
-    <h1>App</h1>
+    <h1>Apps</h1>
     <ul>
       <li>
-        <Link to="/" className={styles['text-green']}>Landing</Link>
+        <Link to="/" className={styles['text-primary']}>Landing</Link>
       </li>
       <li>
-        <Link to="/about" className={styles['text-green']}>About</Link>
+        <Link to="/about" className={styles['text-primary']}>About</Link>
       </li>
     </ul>
     {props.children}

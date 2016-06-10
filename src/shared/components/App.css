@@ -1,3 +1,7 @@
-.text-green {
-  color: green;
+body {
+  background-color: tomato;
+}
+
+.text-primary {
+  color: white;
 }

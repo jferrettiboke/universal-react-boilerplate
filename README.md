@@ -4,25 +4,41 @@
 
 An **Universal React Boilerplate** with sweet features to start quickly.
 
-## Features
+## Sweet features
 
-* ES6 and JSX with [Babel 6.x](https://babeljs.io/)
-* [Webpack](https://webpack.github.io/)
-* [Express 4.x](http://expressjs.com/)
-* [React 15.x](https://facebook.github.io/react/)
-* [React Router 2.x](https://github.com/reactjs/react-router)
-* [React Helmet](https://github.com/nfl/react-helmet)
-* [React Hot Loader](http://gaearon.github.io/react-hot-loader/)
-* [PostCSS](http://postcss.org/)
-    * [Autoprefixer](https://github.com/postcss/autoprefixer)
-    * [PreCSS](https://github.com/jonathantneal/precss)
-* [ESLint](http://eslint.org/) with Airbnb's JavaScript style guide
-* [Stylelint](http://stylelint.io/)
-* [Nodemon](http://nodemon.io/)
+- Universal JavaScript app
+- ES6, ES7 and JSX
+- CSS modules
+- Live reloading with linting tools (JavaScript and CSS)
+- Useful NPM scripts (build, start, lint...)
+- Different environments to work (development and production)
 
-### Coming soon
+## What is under the hood?
 
-* [Redux](http://redux.js.org/)
+- React
+  - [x] [React](https://facebook.github.io/react/) `15.x`
+  - [x] [React Router](https://github.com/reactjs/react-router) `2.x`
+  - [x] [React Helmet](https://github.com/nfl/react-helmet) `3.x`
+- Webpack
+  - [x] [Webpack](https://webpack.github.io/) `1.x`
+  - [x] [Babel](https://babeljs.io/) `6.x`
+  - [x] [React Hot Loader](http://gaearon.github.io/react-hot-loader/) `3.0.0-beta.1`
+- PostCSS
+  - [x] [PostCSS](http://postcss.org/)
+  - [x] [Autoprefixer](https://github.com/postcss/autoprefixer)
+  - [x] [PreCSS](https://github.com/jonathantneal/precss)
+- Linters
+  - [x] [ESLint](http://eslint.org/) `2.x` with Airbnb's JavaScript style guide
+  - [x] [Stylelint](http://stylelint.io/) `6.x` with the standard style guide
+- More
+  - [x] [Express](http://expressjs.com/) `4.x`
+  - [x] [Nodemon](http://nodemon.io/)
+
+## Coming soon
+
+- Webpack optimization for production environment
+- [Redux](http://redux.js.org/)
+- Testing tools
 
 ## Getting started
 

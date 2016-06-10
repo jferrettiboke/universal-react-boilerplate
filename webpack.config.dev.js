@@ -1,6 +1,10 @@
 var path = require('path');
 var webpack = require('webpack');
 
+var PATHS = {
+  app: path.join(__dirname, 'src')
+}
+
 module.exports = {
   devtool: 'eval',
   entry: [
@@ -14,23 +18,51 @@ module.exports = {
     publicPath: '/'
   },
   module: {
-    loaders: [
+    preLoaders: [
       {
         test: /\.jsx?$/,
-        loaders: ['react-hot', 'babel'],
-        include: path.join(__dirname, 'src'),
+        loaders: ['eslint'],
+        include: PATHS.app,
         exclude: /node_modules/
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]!postcss-loader'
+        loaders: ['postcss'],
+        include: PATHS.app
+      }
+    ],
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        loaders: ['react-hot', 'babel'],
+        include: PATHS.app,
+        exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        loaders: [
+          'style',
+          'css?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]',
+          'postcss'
+        ],
+        include: PATHS.app
       }
     ]
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()
   ],
+  eslint: {
+    configFile: './.eslintrc.json'
+  },
   postcss: function () {
-    return [require('autoprefixer'), require('precss')];
+    return [
+      require('autoprefixer'),
+      require('precss'),
+      require('stylelint')({
+        "extends": "stylelint-config-standard",
+        "rules": {}
+      })
+    ];
   }
 };

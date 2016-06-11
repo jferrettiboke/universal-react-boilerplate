@@ -41,9 +41,6 @@ module.exports = {
       }
     ]
   },
-  eslint: {
-    configFile: './.eslintrc.json'
-  },
   postcss: function () {
     return [
       require('autoprefixer'),

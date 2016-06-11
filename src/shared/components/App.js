@@ -11,7 +11,7 @@ const App = props => (
         { rel: 'stylesheet', href: '/css/styles.css' }
       ]}
     />
-    <h1>Apps</h1>
+    <h1>App</h1>
     <ul>
       <li>
         <Link to="/" className={styles['text-primary']}>Landing</Link>

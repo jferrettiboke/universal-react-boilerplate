@@ -1,7 +1,7 @@
 import { AppContainer } from 'react-hot-loader';
 import React from 'react';
 import { render } from 'react-dom';
-import App from '../containers/App';
+import App from '../shared/containers/App';
 
 const rootEl = document.getElementById('root');
 
@@ -13,10 +13,10 @@ render(
 );
 
 if (module.hot) {
-  module.hot.accept('../containers/App', () => {
+  module.hot.accept('../shared/containers/App', () => {
     // If you use Webpack 2 in ES modules mode, you can
     // use <App /> here rather than require() a <NextApp />.
-    const NextApp = require('../containers/App').default;
+    const NextApp = require('../shared/containers/App').default;
 
     render(
       <AppContainer>

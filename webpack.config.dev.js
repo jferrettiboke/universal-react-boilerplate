@@ -45,10 +45,7 @@ module.exports = {
     return [
       require('autoprefixer'),
       require('precss'),
-      require('stylelint')({
-        "extends": "stylelint-config-standard",
-        "rules": {}
-      })
+      require('stylelint')
     ];
   }
 };

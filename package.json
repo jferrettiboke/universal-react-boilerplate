@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/.bin/cross-env NODE_ENV=production ./node_modules/.bin/webpack --progress --profile --colors",
+    "clean": "./node_modules/.bin/rimraf dist",
     "eslint": "./node_modules/.bin/eslint src/**",
     "lint": "npm run eslint && npm run stylelint",
     "start": "./node_modules/.bin/nodemon dist/server",

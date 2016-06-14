@@ -58,7 +58,7 @@ Execute `npm run start:dev` to run the development server on **[http://localhost
 
 Execute `npm run build` to compile client and server at the same time.
 
-Use `npm run clean` first if you have already created the *dist* folder and then execute `npm run build` to make sure it is a new complete compilation.
+Use `npm run clean` first if you have already created the *dist* folder and then execute `npm run build` to make sure it is a new full compilation.
 
 #### Start the app
 

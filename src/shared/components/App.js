@@ -8,7 +8,7 @@ const App = props => (
     <Helmet
       htmlAttributes={{ lang: 'en' }}
       link={[
-        { rel: 'stylesheet', href: '/css/styles.css' }
+        { rel: 'stylesheet', href: '/css/styles.min.css' }
       ]}
     />
     <h1>App</h1>

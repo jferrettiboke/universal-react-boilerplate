@@ -4,18 +4,35 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var commonLoaders = [
-  { test: /\.jsx?$/, loader: 'babel', exclude: /node_modules/ },
-  { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]', 'postcss-loader') }
+  {
+    test: /\.jsx?$/,
+    loaders: ['babel'],
+    include: path.join(__dirname, 'src')
+  },
+  {
+    test: /\.css$/,
+    loader: ExtractTextPlugin.extract(
+      'style',
+      'css?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]',
+      'postcss'
+    )
+  }
 ];
 
 var postCSSConfig = function () {
-  return [require('autoprefixer'), require('precss')];
+  return [
+    require('autoprefixer'),
+    require('precss')
+  ];
 };
 
 module.exports = [
   {
     // The configuration for the client-side rendering
-    entry: path.resolve(__dirname, './src/client/index.js'),
+    entry: [
+      'react-hot-loader/patch',
+      path.resolve(__dirname, './src/client/index.js')
+    ],
     output: {
       path: path.resolve(__dirname, 'dist/public'),
       filename: 'bundle.js'
@@ -24,7 +41,12 @@ module.exports = [
       loaders: commonLoaders
     },
     plugins: [
-      new ExtractTextPlugin('css/styles.css')
+      new webpack.optimize.OccurenceOrderPlugin(),
+      new ExtractTextPlugin('css/styles.min.css'),
+      new webpack.optimize.UglifyJsPlugin(),
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      })
     ],
     postcss: postCSSConfig
   },
@@ -51,7 +73,12 @@ module.exports = [
       loaders: commonLoaders
     },
     plugins: [
-      new ExtractTextPlugin('public/css/styles.css')
+      new webpack.optimize.OccurenceOrderPlugin(),
+      new ExtractTextPlugin('public/css/styles.min.css'),
+      new webpack.optimize.UglifyJsPlugin(),
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      })
     ]
   }
 ];

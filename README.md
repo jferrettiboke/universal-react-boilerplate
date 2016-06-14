@@ -31,6 +31,11 @@ An **Universal React Boilerplate** with sweet features to start quickly.
 - Linters
   - [x] [ESLint](http://eslint.org/) `2.x` with Airbnb's JavaScript style guide
   - [x] [Stylelint](http://stylelint.io/) `6.x` with the standard style guide
+- Testing tools
+  - [x] [Mocha](https://mochajs.org/)
+  - [x] [Chai](http://chaijs.com/)
+  - [x] [Enzyme](http://airbnb.io/enzyme/)
+  - [x] [React addons test utils](https://facebook.github.io/react/docs/test-utils.html)
 - More
   - [x] [Express](http://expressjs.com/) `4.x`
   - [x] [Nodemon](http://nodemon.io/)
@@ -38,7 +43,6 @@ An **Universal React Boilerplate** with sweet features to start quickly.
 ## Coming soon
 
 - [Redux](http://redux.js.org/)
-- Testing tools
 
 ## Getting started
 

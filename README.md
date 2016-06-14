@@ -10,8 +10,9 @@ An **Universal React Boilerplate** with sweet features to start quickly.
 - ES6, ES7 and JSX
 - CSS modules
 - Live reloading with linting tools (JavaScript and CSS)
-- Useful NPM scripts (build, start, lint...)
+- Useful NPM scripts (build, clean, lint, start...)
 - Different environments to work (development and production)
+- Webpack optimization for production environment
 
 ## What is under the hood?
 
@@ -22,7 +23,7 @@ An **Universal React Boilerplate** with sweet features to start quickly.
 - Webpack
   - [x] [Webpack](https://webpack.github.io/) `1.x`
   - [x] [Babel](https://babeljs.io/) `6.x`
-  - [x] [React Hot Loader](http://gaearon.github.io/react-hot-loader/) `3.0.0-beta.1`
+  - [x] [React Hot Loader](http://gaearon.github.io/react-hot-loader/) `3.0.0-beta.2`
 - PostCSS
   - [x] [PostCSS](http://postcss.org/)
   - [x] [Autoprefixer](https://github.com/postcss/autoprefixer)
@@ -36,7 +37,6 @@ An **Universal React Boilerplate** with sweet features to start quickly.
 
 ## Coming soon
 
-- Webpack optimization for production environment
 - [Redux](http://redux.js.org/)
 - Testing tools
 
@@ -44,23 +44,25 @@ An **Universal React Boilerplate** with sweet features to start quickly.
 
 ### Install dependencies
 
-Execute `$ npm install` to install all dependencies.
+Execute `npm install` to install all dependencies.
 
 ### Development environment
 
 #### Start the app
 
-Execute `$ npm run start:dev` to run the development server on **http://localhost:3000**.
+Execute `npm run start:dev` to run the development server on **[http://localhost:3000](http://localhost:3000)**.
 
 ### Production environment
 
 #### Build the app
 
-Execute `$ npm run build` to compile client, server and watching for future compilations on both sides.
+Execute `npm run build` to compile client and server at the same time.
+
+Use `npm run clean` first if you have already created the *dist* folder and then execute `npm run build` to make sure it is a new complete compilation.
 
 #### Start the app
 
-Execute `$ npm run start` to run the server and go to **http://localhost:8080** (by default it will use port 8080).
+Execute `npm run start` to run the server and go to **[http://localhost:8080](http://localhost:8080)** (by default it will use port 8080).
 
 ## Contributing
 

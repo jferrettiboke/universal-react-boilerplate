@@ -10,7 +10,7 @@ An **Universal React Boilerplate** with sweet features to start quickly.
 - ES6, ES7 and JSX
 - CSS modules
 - Live reloading with linting tools (JavaScript and CSS)
-- Useful NPM scripts (build, clean, lint, start...)
+- Useful NPM scripts (build, clean, lint, start, test...)
 - Different environments to work (development and production)
 - Webpack optimization for production environment
 

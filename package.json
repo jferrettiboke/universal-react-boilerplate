@@ -6,11 +6,11 @@
   "scripts": {
     "build": "./node_modules/.bin/cross-env NODE_ENV=production ./node_modules/.bin/webpack --progress --profile --colors",
     "clean": "./node_modules/.bin/rimraf dist",
-    "eslint": "./node_modules/.bin/eslint src/**",
-    "lint": "npm run eslint && npm run stylelint",
+    "lint": "npm run lint:css && npm run lint:js",
+    "lint:css": "./node_modules/.bin/stylelint \"src/**/*.css\"",
+    "lint:js": "./node_modules/.bin/eslint src/**",
     "start": "./node_modules/.bin/nodemon dist/server",
     "start:dev": "node server.dev",
-    "stylelint": "./node_modules/.bin/stylelint \"src/**/*.css\"",
     "test": "./node_modules/.bin/mocha --watch test/.setup.js src/**/*.test.js"
   },
   "author": "Jesús Ferretti",

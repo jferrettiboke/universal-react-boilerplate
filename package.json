@@ -43,6 +43,7 @@
     "eslint-plugin-react": "^5.1.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "jsdom": "^9.2.1",
+    "json-loader": "^0.5.4",
     "mocha": "^2.5.3",
     "nodemon": "^1.9.2",
     "postcss-loader": "^0.9.1",

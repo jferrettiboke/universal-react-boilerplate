@@ -38,6 +38,10 @@ module.exports = {
           'css?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]',
           'postcss'
         ]
+      },
+      {
+        test: /\.json$/,
+        loaders: ['json']
       }
     ]
   },

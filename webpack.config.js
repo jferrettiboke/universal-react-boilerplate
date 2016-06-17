@@ -18,6 +18,10 @@ var commonLoaders = [
     )
   },
   {
+    test: /\.(png|jpg|jpeg|gif|svg)$/,
+    loaders: ['file?name=images/[name]-[hash:base64:5].[ext]']
+  },
+  {
     test: /\.json$/,
     loaders: ['json']
   }

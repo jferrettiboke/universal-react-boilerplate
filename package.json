@@ -11,7 +11,7 @@
     "lint:js": "./node_modules/.bin/eslint src/**",
     "start": "./node_modules/.bin/nodemon dist/server",
     "start:dev": "node server.dev",
-    "test": "./node_modules/.bin/mocha --watch test/.setup.js \"+(src|test)/**/*.test.js\""
+    "test": "./node_modules/.bin/mocha --watch tests/helpers/.setup.js \"+(src|tests)/**/*.test.js\""
   },
   "author": "Jesús Ferretti",
   "license": "MIT",

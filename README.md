@@ -20,6 +20,10 @@ An **Universal React Boilerplate** with sweet features to start quickly.
   - [x] [React](https://facebook.github.io/react/) `15.x`
   - [x] [React Router](https://github.com/reactjs/react-router) `2.x`
   - [x] [React Helmet](https://github.com/nfl/react-helmet) `3.x`
+- Redux
+  - [x] [Redux](http://redux.js.org/) `3.x`
+  - [x] [React Redux](https://github.com/reactjs/react-redux)
+  - [x] [Redux Thunk](https://github.com/gaearon/redux-thunk)
 - Webpack
   - [x] [Webpack](https://webpack.github.io/) `1.x`
   - [x] [Babel](https://babeljs.io/) `6.x`
@@ -39,10 +43,6 @@ An **Universal React Boilerplate** with sweet features to start quickly.
 - More
   - [x] [Express](http://expressjs.com/) `4.x`
   - [x] [Nodemon](http://nodemon.io/)
-
-## Coming soon
-
-- [Redux](http://redux.js.org/)
 
 ## Getting started
 

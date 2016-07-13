@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import Counter from '../../containers/Counter';
 
 export default () => (
   <div>
@@ -10,5 +11,6 @@ export default () => (
       ]}
     />
     Landing
+    <Counter />
   </div>
 );

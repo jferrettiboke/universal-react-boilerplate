@@ -24,6 +24,8 @@ An **Universal React Boilerplate** with sweet features to start quickly.
   - [x] [Redux](http://redux.js.org/) `3.x`
   - [x] [React Redux](https://github.com/reactjs/react-redux)
   - [x] [Redux Thunk](https://github.com/gaearon/redux-thunk)
+  - [x] [Redux DevTools](https://github.com/gaearon/redux-devtools)
+    - [x] [Redux DevTools Log Monitor](https://github.com/gaearon/redux-devtools-log-monitor)
 - Webpack
   - [x] [Webpack](https://webpack.github.io/) `1.x`
   - [x] [Babel](https://babeljs.io/) `6.x`

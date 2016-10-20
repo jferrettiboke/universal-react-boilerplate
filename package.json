@@ -6,7 +6,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack -p --progress --profile --colors",
     "clean": "rimraf dist",
-    "lint": "npm run lint:css && npm run lint:js",
+    "lint": "npm run lint:css; npm run lint:js",
     "lint:css": "stylelint \"src/**/*.css\"",
     "lint:js": "eslint src/**",
     "start": "nodemon dist/server",
